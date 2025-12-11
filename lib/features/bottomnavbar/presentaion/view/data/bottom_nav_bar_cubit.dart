@@ -1,25 +1,39 @@
-// import 'package:ecommerce/features/bottomnavbar/presentaion/view/data/bottom_nav_bar_state.dart';
-// import 'package:ecommerce/features/home/presentaion/view/home_view.dart';
-// import 'package:flutter/material.dart';
-// import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mantiq_app/features/bottomnavbar/presentaion/view/data/bottom_nav_bar_state.dart';
 
-// class BottomNavBarCubit extends Cubit<BottomNavBarState> {
-//   BottomNavBarCubit() : super(BottomNavInitial());
+import '../../../../../generated/app_assets.dart';
 
-//   int currentIndex = 0;
+class BottomNavBarCubit extends Cubit<BottomNavBarState> {
+  BottomNavBarCubit() : super(BottomNavInitial());
 
-//   final List<Widget> pages = const [
-//     HomeView(),
-//     Center(child: Text("Shop")),
-//     Center(child: Text("Bag")),
-//     Center(child: Text("Favorites")),
-//     Center(child: Text("Profile")),
-//   ];
+  int currentIndex = 0;
 
-//   Widget get currentPage => pages[currentIndex];
+  final List<String> titles = const [
+    "Home",
+    "Favorite",
+    "Notification",
+    "Setting",
+  ];
 
-//   void changeTab(int index) {
-//     currentIndex = index;
-//     emit(BottomNavChanged(index));
-//   }
-// }
+  final List<String> icons = const[
+    AppAssets.home,
+    AppAssets.fav,
+    AppAssets.notification,
+    AppAssets.setting,
+  ];
+
+  final List<Widget> pages = const [
+    Center(child: Text("HOME")),
+    Center(child: Text("FAVORITE")),
+    Center(child: Text("NOTIFICATION")),
+    Center(child: Text("SETTING")),
+  ];
+
+  Widget get currentPage => pages[currentIndex];
+
+  void changeTab(int index) {
+    currentIndex = index;
+    emit(BottomNavChanged(index));
+  }
+}

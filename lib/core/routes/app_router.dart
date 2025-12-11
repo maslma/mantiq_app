@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../features/auth/presentation/views/login_view.dart';
 import '../../features/auth/presentation/views/sign_up_view.dart';
+import '../../features/bottomnavbar/presentaion/view/bottom_nav_view.dart';
+import '../../features/bottomnavbar/presentaion/view/data/bottom_nav_bar_cubit.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
 import 'routes.dart';
 
@@ -17,15 +20,15 @@ abstract class AppRouter {
       //   return MaterialPageRoute(
       //     builder: (context) => const ForgotPasswordView(),
       //   );
-      // case Routes.home:
-      //   return MaterialPageRoute(
-      //     builder: (context) => MultiBlocProvider(
-      //       providers: [BlocProvider(create: (_) => BottomNavBarCubit())],
-      //       child: const BottomNavView(),
-      //     ),
-      //   );
+      case Routes.bottomNav:
+        return MaterialPageRoute(
+          builder: (context) => MultiBlocProvider(
+            providers: [BlocProvider(create: (_) => BottomNavBarCubit())],
+            child: const BottomNavView(),
+          ),
+        );
       default:
-        return MaterialPageRoute(builder: (context) => const SplashView());
+        return MaterialPageRoute(builder: (context) => const BottomNavView());
     }
   }
 }

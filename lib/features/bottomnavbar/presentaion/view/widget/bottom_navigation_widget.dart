@@ -1,46 +1,60 @@
-// import 'package:ecommerce/core/theme/app_colors.dart';
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
-// class AppBottomNavBar extends StatelessWidget {
-//   final int currentIndex;
-//   final Function(int) onTap;
+import '../../../../../core/theme/app_colors.dart';
 
-//   const AppBottomNavBar({
-//     super.key,
-//     required this.currentIndex,
-//     required this.onTap,
-//   });
+class AppBottomNavBar extends StatelessWidget {
+  final int currentIndex;
+  final Function(int) onTap;
+  final List<String> titles;
+  final List<String> icons;
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return BottomNavigationBar(
-//       type: BottomNavigationBarType.fixed,
-//       currentIndex: currentIndex,
-//       selectedItemColor: AppColors.primaryColor,
-//       unselectedItemColor: AppColors.grayColor,
-//       onTap: onTap,
-//       items: const [
-//         BottomNavigationBarItem(
-//           icon: Icon(Icons.home, size: 35),
-//           label: "Home",
-//         ),
-//         BottomNavigationBarItem(
-//           icon: Icon(Icons.shopping_cart_outlined, size: 35),
-//           label: "Shop",
-//         ),
-//         BottomNavigationBarItem(
-//           icon: Icon(Icons.shopping_bag_outlined, size: 35),
-//           label: "Bag",
-//         ),
-//         BottomNavigationBarItem(
-//           icon: Icon(Icons.favorite_border, size: 35),
-//           label: "Favorites",
-//         ),
-//         BottomNavigationBarItem(
-//           icon: Icon(Icons.person_outline, size: 35),
-//           label: "Profile",
-//         ),
-//       ],
-//     );
-//   }
-// }
+  const AppBottomNavBar({
+    super.key,
+    required this.currentIndex,
+    required this.onTap,
+    required this.titles,
+    required this.icons,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return BottomNavigationBar(
+      type: BottomNavigationBarType.fixed,
+      currentIndex: currentIndex,
+      selectedItemColor: AppColors.primaryColor,
+      unselectedItemColor: AppColors.grayColor,
+      onTap: onTap,
+      items: [
+        BottomNavigationBarItem(
+          icon: SvgPicture.asset(
+            icons[0],
+            semanticsLabel: 'Red dash paths',
+          ),
+          label: titles[0],
+        ),
+        BottomNavigationBarItem(
+          icon: SvgPicture.asset(
+            icons[1],
+            semanticsLabel: 'Red dash paths',
+          ),
+          label: titles[1],
+        ),
+        BottomNavigationBarItem(
+          icon: SvgPicture.asset(
+            icons[2],
+            semanticsLabel: 'Red dash paths',
+          ),
+          label: titles[2],
+        ),
+        BottomNavigationBarItem(
+          icon: SvgPicture.asset(
+            icons[3],
+            semanticsLabel: 'Red dash paths',
+          ),
+          label: titles[3],
+        ),
+      ],
+    );
+  }
+}

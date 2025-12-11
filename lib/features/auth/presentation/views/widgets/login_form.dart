@@ -80,7 +80,7 @@ class _LoginFormState extends State<LoginForm> {
             title: "LOGIN",
             onTap: () {
               if (_formKey.currentState!.validate()) {
-                context.pushNamed(Routes.home);
+                context.pushNamed(Routes.bottomNav);
               }
               print("LOGIN SUCCESS");
             },
