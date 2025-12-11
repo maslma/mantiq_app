@@ -4,9 +4,14 @@ import '../../theme/app_colors.dart';
 import 'custom_text.dart';
 
 class SelectWidget extends StatelessWidget {
-  const SelectWidget({super.key, required this.title, required this.isSelect});
+  const SelectWidget({
+    super.key,
+    required this.title,
+    required this.isSelect,
+    this.image = '',
+  });
 
-  final String title;
+  final String title, image;
   final bool isSelect;
 
   @override
@@ -22,6 +27,11 @@ class SelectWidget extends StatelessWidget {
       margin: EdgeInsets.only(bottom: 8),
       child: Row(
         children: [
+          if (image.isNotEmpty) ...[
+            Image.asset(image, width: 24, height: 24),
+            SizedBox(width: 8),
+          ],
+
           Expanded(child: CustomText.w500S14Grey(title)),
           SizedBox(width: 8),
           selectWidget(isSelect),

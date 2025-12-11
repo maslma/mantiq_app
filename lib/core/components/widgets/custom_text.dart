@@ -84,8 +84,14 @@ class CustomText extends StatelessWidget {
   factory CustomText.w500S16(String? text) =>
       CustomText(txt: text, fontSize: 16, fontWeight: FontWeight.w500);
 
+  factory CustomText.w600S14(String? text) =>
+      CustomText(txt: text, fontSize: 14, fontWeight: FontWeight.w600);
+
+  factory CustomText.w400S12(String? text) =>
+      CustomText(txt: text, fontSize: 12, fontWeight: FontWeight.w400);
+
   factory CustomText.w600S18(String? text) =>
-      CustomText(txt: text, fontSize: 16, fontWeight: FontWeight.w500);
+      CustomText(txt: text, fontSize: 16, fontWeight: FontWeight.w600);
 
   factory CustomText.w700S14(String? text) =>
       CustomText(txt: text, fontSize: 14, fontWeight: FontWeight.bold);

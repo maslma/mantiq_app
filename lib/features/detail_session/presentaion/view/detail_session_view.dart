@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mantiq_app/core/components/widgets/custom_button.dart';
 import 'package:mantiq_app/core/components/widgets/custom_text.dart';
+import 'package:mantiq_app/core/extensions/app_extentions.dart';
+import 'package:mantiq_app/core/routes/routes.dart';
 import 'package:mantiq_app/core/theme/app_colors.dart';
 
 import '../../../../core/components/widgets/select_widget.dart';
@@ -88,7 +90,7 @@ class DetailSessionView extends StatelessWidget {
                   child: CustomButton(
                     title: 'Complete Booking',
                     edgeInsets: EdgeInsets.symmetric(vertical: 12),
-                    onPressed: () {},
+                    onPressed: () => context.pushNamed(Routes.payment),
                   ),
                 ),
                 SizedBox(width: 8),

@@ -20,6 +20,12 @@ class AppAssets {
   static const String notification = "assets/images/notification.svg";
   static const String setting = "assets/images/setting-2.svg";
 
+  /// payment assets
+  static const String payWithCard = "assets/images/pay-with-card.png";
+  static const String payWithPaypal = "assets/images/pay-with-paypal.png";
+  static const String payWithWallet = "assets/images/pay-with-wallet.png";
+
   /// home
   static const String hi = "assets/images/hi.png";
+  static const String wallet = "assets/images/wallet.png";
 }

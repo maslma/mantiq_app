@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mantiq_app/features/detail_session/presentaion/view/data/detail_session_cubit.dart';
+import 'package:mantiq_app/features/payment/presentaion/view/data/payment_cubit.dart';
+import 'package:mantiq_app/features/payment/presentaion/view/payment_view.dart';
 
 import '../../features/bottomnavbar/presentaion/view/bottom_nav_view.dart';
 import '../../features/bottomnavbar/presentaion/view/data/bottom_nav_bar_cubit.dart';
@@ -33,6 +35,13 @@ abstract class AppRouter {
           builder: (context) => MultiBlocProvider(
             providers: [BlocProvider(create: (_) => DetailSessionCubit())],
             child: const DetailSessionView(),
+          ),
+        );
+      case Routes.payment:
+        return MaterialPageRoute(
+          builder: (context) => MultiBlocProvider(
+            providers: [BlocProvider(create: (_) => PaymentCubit())],
+            child: const PaymentView(totalAmount: '10'),
           ),
         );
       default:
