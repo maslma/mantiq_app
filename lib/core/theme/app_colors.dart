@@ -31,4 +31,5 @@ abstract class AppColors {
 
   static const Color gradiantTextColor1 = Color(0xff810081);
   static const Color gradiantTextColor2 = Color(0xffFA00FA);
+
 }

@@ -17,6 +17,7 @@ class BottomNavView extends StatelessWidget {
           final cubit = context.read<BottomNavBarCubit>();
           return Scaffold(
             body: cubit.currentPage,
+            backgroundColor: Colors.white,
             bottomNavigationBar: AppBottomNavBar(
               currentIndex: cubit.currentIndex,
               icons: cubit.icons,

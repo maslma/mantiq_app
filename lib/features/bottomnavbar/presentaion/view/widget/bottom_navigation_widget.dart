@@ -29,28 +29,24 @@ class AppBottomNavBar extends StatelessWidget {
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
             icons[0],
-            semanticsLabel: 'Red dash paths',
           ),
           label: titles[0],
         ),
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
             icons[1],
-            semanticsLabel: 'Red dash paths',
           ),
           label: titles[1],
         ),
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
             icons[2],
-            semanticsLabel: 'Red dash paths',
           ),
           label: titles[2],
         ),
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
             icons[3],
-            semanticsLabel: 'Red dash paths',
           ),
           label: titles[3],
         ),

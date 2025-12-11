@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mantiq_app/features/bottomnavbar/presentaion/view/data/bottom_nav_bar_state.dart';
 
 import '../../../../../generated/app_assets.dart';
+import '../home_view.dart';
 
 class BottomNavBarCubit extends Cubit<BottomNavBarState> {
   BottomNavBarCubit() : super(BottomNavInitial());
@@ -24,10 +25,10 @@ class BottomNavBarCubit extends Cubit<BottomNavBarState> {
   ];
 
   final List<Widget> pages = const [
-    Center(child: Text("HOME")),
+    HomeView(),
     Center(child: Text("FAVORITE")),
-    Center(child: Text("NOTIFICATION")),
-    Center(child: Text("SETTING")),
+    Center(child: Text("Notification")),
+    Center(child: Text("Setting")),
   ];
 
   Widget get currentPage => pages[currentIndex];

@@ -19,4 +19,7 @@ class AppAssets {
   static const String fav = "assets/images/heart.svg";
   static const String notification = "assets/images/notification.svg";
   static const String setting = "assets/images/setting-2.svg";
+
+  /// home
+  static const String hi = "assets/images/hi.png";
 }
