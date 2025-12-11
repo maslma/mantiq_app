@@ -79,11 +79,13 @@ class CustomButton extends StatelessWidget {
           color: enable ? buttonColor : Colors.grey.shade300,
           borderRadius: borderRadius ?? BorderRadius.circular(8),
         ),
-        child: CustomText.w500S16(title).copyWith(
-          color: Colors.white,
-          fontSize: 16,
-          fontWeight: fontWeight,
-          borderRadius: borderRadius,
+        child: Center(
+          child: CustomText.w500S16(title).copyWith(
+            color: Colors.white,
+            fontSize: 16,
+            fontWeight: fontWeight,
+            borderRadius: borderRadius,
+          ),
         ),
       ),
     );

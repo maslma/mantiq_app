@@ -64,9 +64,9 @@ class CustomText extends StatelessWidget {
     );
   }
 
-  factory CustomText.w700S18(String? text, {Color? color}) => CustomText(
+  factory CustomText.w700S16(String? text, {Color? color}) => CustomText(
     txt: text,
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: FontWeight.w700,
     color: color,
   );
@@ -83,6 +83,12 @@ class CustomText extends StatelessWidget {
 
   factory CustomText.w500S16(String? text) =>
       CustomText(txt: text, fontSize: 16, fontWeight: FontWeight.w500);
+
+  factory CustomText.w600S18(String? text) =>
+      CustomText(txt: text, fontSize: 16, fontWeight: FontWeight.w500);
+
+  factory CustomText.w700S14(String? text) =>
+      CustomText(txt: text, fontSize: 14, fontWeight: FontWeight.bold);
 
   factory CustomText.w600S12(String? text, {Color? color}) => CustomText(
     txt: text,
