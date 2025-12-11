@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:mantiq_app/core/extensions/app_extentions.dart';
 import 'package:mantiq_app/core/theme/app_colors.dart';
 import 'package:mantiq_app/features/auth/presentation/views/widgets/login_form.dart';
-import '../../../../core/theme/app_text_styles.dart';
 import 'widgets/social_media_buttons.dart';
 
 class LoginView extends StatelessWidget {
@@ -12,12 +11,12 @@ class LoginView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backGroundColor,
-      appBar: AppBar(
-        leading: IconButton(
-          onPressed: () => context.pop(),
-          icon: Icon(Icons.arrow_back_ios_new),
-        ),
-      ),
+      // appBar: AppBar(
+      //   leading: IconButton(
+      //     onPressed: () => context.pop(),
+      //     icon: Icon(Icons.arrow_back_ios_new),
+      //   ),
+      // ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -27,7 +26,7 @@ class LoginView extends StatelessWidget {
             73.verticalSizedBox,
             LoginForm(),
             150.verticalSizedBox,
-            SocialMediaButtons(),
+            // SocialMediaButtons(),
           ],
         ).horizontalPadding(16),
       ),

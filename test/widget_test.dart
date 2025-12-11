@@ -7,7 +7,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:mantiq_app/app/ecommerce_app.dart';
+import 'package:mantiq_app/app/mantiq_app.dart';
 
 
 void main() {

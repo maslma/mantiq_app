@@ -10,7 +10,7 @@ class MantiqApp extends StatelessWidget {
       title: 'Mantiq App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // fontFamily: "Metropolis",
+        fontFamily: "Montserrat",
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
       onGenerateRoute: AppRouter.generateRoute,

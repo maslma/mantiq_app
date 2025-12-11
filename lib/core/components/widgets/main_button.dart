@@ -13,21 +13,13 @@ class MainButton extends StatelessWidget {
     return InkWell(
       onTap: onTap,
       child: Container(
-        padding: 14.vPadding,
+        padding: 16.vPadding,
         width: double.infinity,
         decoration: BoxDecoration(
           color: AppColors.primaryColor,
-          borderRadius: 25.allBorderRadius,
-          boxShadow: [
-            BoxShadow(
-              color: AppColors.primaryColor.withValues(alpha: 0.25),
-              spreadRadius: 0,
-              blurRadius: 8,
-              offset: const Offset(0, 4),
-            ),
-          ],
+          borderRadius: 8.allBorderRadius,
         ),
-        child: Text(title, style: AppTextStyles.font14WhiteWeight500).center(),
+        child: Text(title, style: AppTextStyles.font16BoldWeight700).center(),
       ),
     );
   }

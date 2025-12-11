@@ -3,9 +3,10 @@ class AppAssets {
   AppAssets._();
 
   
-  /// Assets for imagesArrow
-  /// assets/images/arrow.png
-  static const String imagesArrow = "assets/images/arrow.png";
+  /// Assets for imagesOnBoarding
+  static const String imagesOnBoarding1 = "assets/images/on_boarding_1.png";
+  static const String imagesOnBoarding2 = "assets/images/on_boarding_2.png";
+  static const String imagesOnBoarding3 = "assets/images/on_boarding_3.png";
 
   /// Assets for imagesFacebook
   /// assets/images/facebook.png

@@ -22,7 +22,7 @@ class NavigateTextWidget extends StatelessWidget {
         children: [
           Text(title, style: AppTextStyles.font14BlackWeight500),
           3.horizontalSizedBox,
-          Image.asset(AppAssets.imagesArrow, width: 40, height: 25),
+          // Image.asset(AppAssets.imagesArrow, width: 40, height: 25),
         ],
       ),
     );
